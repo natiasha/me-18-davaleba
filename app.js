@@ -89,14 +89,14 @@ startBtn.addEventListener('click', startAutoSliding);
 
 //damatebuli kodi
  renderSlider();
-slide-item.addEventListener('mouseenter', (e) => {
+slide-area.addEventListener('mouseenter', (e) => {
   console.log(e.code);
   if(e.code === 'startAutoSliding'){
     stopAutoSliding();
   }
   });
 
-slide-item.addEventListener('mouseleave', (e) => {
+slide-area.addEventListener('mouseleave', (e) => {
     console.log(e.code);
     if(e.code === 'stopAutoSliding'){
       startAutoSliding();
