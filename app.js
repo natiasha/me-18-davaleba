@@ -88,15 +88,22 @@ stopBtn.addEventListener('click', stopAutoSliding);
 startBtn.addEventListener('click', startAutoSliding);
 
 //damatebuli kodi
-let enterEventCount = 0;
-let leaveEventCount = 0;
-const mouseTarget = document.getElementById('slide-item');
-mouseTarget.addEventListener('mouseenter', e => {
-   enterEventCount++;
-}
-mouseTarget.addEventListener('mouseleave', e => {
-    leaveEventCount++;
-   }
+
+slide-item.addEventListener('mouseenter', (e) => {
+  console.log(e.code);
+  if(e.code === 'startAutoSliding'){
+    stopAutoSliding();
+  }
+  });
+
+slide-item.addEventListener('mouseleave', (e) => {
+    console.log(e.code);
+    if(e.code === 'stopAutoSliding'){
+      startAutoSliding();
+    }
+  });
+      
+
 
 //3
 //4
@@ -120,4 +127,3 @@ else
 {
   console.log('no');
 }
-
