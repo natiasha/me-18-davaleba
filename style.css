@@ -1,0 +1,14 @@
+#txt {
+width: 250px;
+height: 70px;
+padding-top: 19px;
+background-color:black;
+border: 12px;
+border-color: rgb(219, 207, 207);
+border-radius: 12px;
+font-size:32px;
+font-weight: bold;
+color: blue;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+}
