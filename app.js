@@ -19,6 +19,7 @@ i="0"+i;
 return i;
 }
 //2
+const slides = document.querySelectorAll('.slide-area');
 const slides = document.querySelectorAll('.slide-item');
 const slidesLength = slides.length;
 const nextButton = document.querySelector('#next');
