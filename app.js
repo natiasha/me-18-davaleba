@@ -19,6 +19,8 @@ i="0"+i;
 return i;
 }
 //2
+const slideArea = document.querySelector('.slide-area');
+const slideArea = document.querySelector('.slide-area');
 const slides = document.querySelectorAll('.slide-item');
 const slidesLength = slides.length;
 const nextButton = document.querySelector('#next');
@@ -88,21 +90,30 @@ stopBtn.addEventListener('click', stopAutoSliding);
 startBtn.addEventListener('click', startAutoSliding);
 
 //damatebuli kodi
-renderSlider();
-slides.addEventListener('mouseenter', (e) => {
-  console.log(e.code);
-  if(e.code === 'startAutoSliding'){
-    stopAutoSliding();
-  }
-  });
+//renderSlider();
+//slides.addEventListener('mouseenter', (e) => {
+ // console.log(e.code);
+  //if(e.code === 'startAutoSliding'){
+    //stopAutoSliding();
+ // }
+  //});
 
-slides.addEventListener('mouseleave', (e) => {
-    console.log(e.code);
-    if(e.code === 'stopAutoSliding'){
-      startAutoSliding();
-    }
-  });
+//slides.addEventListener('mouseleave', (e) => {
+   // console.log(e.code);
+   // if(e.code === 'stopAutoSliding'){
+    //  startAutoSliding();
+   // }
+ // });
       
+slideArea.addEventListener('mouseenter', e => {
+ console.log('mouseenter')
+ stopAutoSliding()
+});
+
+ slideArea.addEventListener('mouseleave', e => {
+ console.log('mouseleave')
+ startAutoSliding();
+ });
 
 
 //3
